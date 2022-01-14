@@ -509,9 +509,15 @@ img{
 
 .skills-container{
     margin: 0 auto;
+    margin-top: 100px;
 }
 
-.skills-title{
+.section-title{
+    overflow: hidden;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    /* Тут можно добавить другие стили для заголовка */
     font-family: Merriweather;
     font-style: normal;
     font-weight: bold;
@@ -519,22 +525,44 @@ img{
     line-height: 80px;
     text-align: center;
     color: var(--color-gold);
-    padding: 100px 664px;
     margin-bottom: 60px;
 }
-.skills-title::after, .skills-title::before{
-    content: "";
-    height: 2px;
-    background: #BDAE82;
-    border-radius: 0px;
-    
-}
 
-.lines{
-    overflow-x: hidden;
+.section-title span{
+    /* Стили тега обертки для заголовков 
+    ** в несколько строк */
+    display: inline-block;
+    vertical-align: middle;
+}
+.section-title:before,
+.section-title:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    /* Задаем ширину 100% и выбираем высоту линии, 
+    ** в нашем примере она равна 4 пикселям */
+    width: 50%;
+    height: 2px;
+    background-color: var(--color-gold);
+    position: relative;
+}
+.section-title:before {
+    /* Смещаем левую линию на 100% влево, чтобы линия 
+    ** встала рядом с текстом слева */
+    margin-left: -50%;
+    left: -20px;
+}
+.section-title:after {
+    /* Смещаем правую линию на 100% вправо, чтобы 
+    ** линия встала рядом с текстом справа */
+    margin-right: -50%;
+    right: -20px;
 }
 
 .skills-cards{
+    /*display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;*/
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 40px;
@@ -544,17 +572,18 @@ img{
 
 .skills-item{
     grid-column: span 1;
-}
+} 
 
 .skills-item-pic{
     margin-bottom: 50px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-
 .pic-item-thumb{
-    display: block;;
+    display: block;
 }
 
 .skills-item-title{
@@ -569,6 +598,8 @@ img{
 }
 
 .skills-card-desc{
+    height: 72px;
+    width: 280px;
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
@@ -577,6 +608,17 @@ img{
     text-align: center;
     color: #FFFFFF;
 }
+
+/*skills styles end*/
+
+/*Portfolio styles start*/
+
+.portfolio-container{
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+
 
 
 
