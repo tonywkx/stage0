@@ -618,10 +618,132 @@ img{
     margin-top: 100px;
 }
 
+.button-container{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 60px;
+}
 
+.portfolio-button{
+    height: 55px;
+    width: 220px;
+    background-color: var(--bg-dark);
+    border: 2px solid #BDAE82;
+    border-radius: 0px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    color: #BDAE82;
+    cursor: pointer;
+}
 
+.portfolio-button:hover, .portfolio-button:focus, .portfolio-button:active{
+    background-color: var(--color-gold);
+    color: var(--bg-dark);
+}
 
+.photo-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 100px;
+}
 
+.portfolio-photo-pic{
+    height: 560px;
+    width: 450px;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+/*Portfolio styles end*/
+
+/*Video styles start*/
+
+.video-container{
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.video-player{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.video-button{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    background-size: contain;
+    transition: .3s; 
+}
+
+.video-button:hover{
+    filter: invert(21%) sepia(25%) saturate(413%) hue-rotate(7deg) brightness(86%) contrast(85%);
+}
+
+/*Video styles end*/
+
+/*Price styles start*/
+
+.price-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 100px;
+}
+
+.price-item{
+    height: 505px;
+    width: 450px;
+    border: 3px solid var(--color-gold);
+}
+
+.price-item-title{
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 56px;
+    color: var(--color-white);
+    padding: 43px;
+    text-align: center;
+}
+
+.price-item-price{
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: center;
+    color: var(--color-gold);
+}
+
+.price-item-decs{
+    display: block;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
 
 
 
