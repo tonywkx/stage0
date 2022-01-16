@@ -86,39 +86,5 @@ html {
   }
 
    
-  .section-item a {
-    color: #829985;
-    text-decoration: none;  
-    transition: color 0.5s;
-  }
-  .section-item a:hover {
-    color: #4d2323;
-  }
   
-  
-    
-.footer {
-    background-color: var(--bg-dark);
-    padding: 10px;  
-  }
-  
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    color: #fff;
-  }
-  
-.github {
-    color: #fff;
-    text-decoration: none;
-    line-height: 45px;
-  }
-  
-.rss {
-    width: 121px;
-    height: 45px;
-    background-image: url("./assets/svg/rsschool.svg");
-    background-size: contain;
-  }
+
