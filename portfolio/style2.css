@@ -561,7 +561,7 @@ img{
     margin-bottom: 60px;
 }
 
-.section-title span{
+.section-title div{
     /* Стили тега обертки для заголовков 
     ** в несколько строк */
     display: inline-block;
