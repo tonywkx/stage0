@@ -384,6 +384,7 @@ textarea {
 html{
     box-sizing: border-box;
     scroll-behavior: smooth; 
+    overflow-x: hidden;
 }
 *, *::before, *::after{
     box-sizing: inherit;
@@ -398,6 +399,7 @@ body{
     font-weight: normal;
     color: #ffffff;
     background-color: var(--bg-dark);
+    overflow-x: hidden;
 }
 
 img{
@@ -406,7 +408,7 @@ img{
 }
 
 .conatiner{
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -521,7 +523,7 @@ img{
 /* Intro styles start */
 
 .hero{
-    min-height: 100vh;
+    height: 910px;
     background: url(./assets/img/bg.jpg) no-repeat center;
     background-size: cover;
     padding-top: 250px;
@@ -561,6 +563,13 @@ img{
     margin-left: 80px;
     cursor: pointer;
     transition: .5s;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    color: #000000;
 }
 
 .intro-button:hover, .intro-button:focus, .intro-button:active{
@@ -702,6 +711,8 @@ img{
 .button-container{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 5px;
     margin-bottom: 60px;
 }
@@ -783,6 +794,7 @@ img{
 
 .price-cards{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 25px;
@@ -844,6 +856,12 @@ img{
     cursor: pointer;
     margin-top: 40px;
     transition: .5s;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
 }
 
 .price-button:hover, .price-button:focus, .price-button:active{
@@ -953,6 +971,12 @@ img{
     align-items: center;
     margin: 0 auto;
     color: #fff;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
   }
 .github-container{
     font-family: Inter;
@@ -999,16 +1023,31 @@ img{
 /* Media start*/
 
   @media (max-width: 768px) {
+      
+      .portfolio-container{
+        width: calc(100% - 120px);
+      }
+      
+      .contacts-container{
+          align-items: center;
+          justify-content: center;
+      }
+      .form-container{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+        }
     
 
       .header-burger{
           display: block;
       }
 
+      
 
       .header__nav{
           position: fixed;
-          width: 620px;
           height: 100%;
           top: 0;
           left: 0;
@@ -1020,7 +1059,7 @@ img{
           transition: 0.3s;
       }
       .header-nav-active{
-        transform: translateX(0);
+        transform: translateX(148px);
 
       }
       .header__item{
@@ -1041,6 +1080,7 @@ img{
           position: absolute;
           top: 20px;
           right: 64px;
+          margin-right: 148px;
           z-index: 11;
       }
       .header-nav-close-line{
@@ -1057,5 +1097,22 @@ img{
       .header-nav-close-line:last-child{
         transform: translateY(-50%) rotate(-45deg);
       }
-      
+      .footer{
+          height: 190px;
+      }
+
+      .footer-container{
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+      .github-container{
+          margin-top: 28px;
+      }
+      .social-container{
+          margin-bottom: 28px;
+      }
+
   }

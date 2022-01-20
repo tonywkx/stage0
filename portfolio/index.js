@@ -37,10 +37,18 @@ console.log(`Вёрстка валидная 10/10\n
     const burgerItem = document.querySelector('.burger');
     const menu = document.querySelector('.header__nav');
     const menuCloseItem = document.querySelector('.header-nav-close');
+    const menuLinks = document.querySelectorAll('.header__link');
     burgerItem.addEventListener('click', () =>{
         menu.classList.add('header-nav-active');
     });
     menuCloseItem.addEventListener('click', () =>{
         menu.classList.remove('header-nav-active');
     });
+    if (window.innerWidth <= 768){
+        for (let i = 0; i < menuLinks.length; i += 1) {
+            menuLinks[i].addEventListener('click', () =>{
+                menu.classList.remove('header-nav-active');
+            });    
+        };
+    };
 } ());
