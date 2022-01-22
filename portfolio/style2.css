@@ -408,12 +408,6 @@ img{
 }
 
 .conatiner{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    
-
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
@@ -434,11 +428,13 @@ img{
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 20px;   
 }
 
+
+
 .header__nav{
-    align-self: flex-end;
+    margin-left: 700px;
 }
 .header__list{
     display: flex;
@@ -655,7 +651,7 @@ img{
 
 .skills-cards{
     display: flex;
-    flex-direction: row;
+    margin-left: 20px;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
@@ -963,7 +959,7 @@ img{
 }
 
 .form-input:focus, .form-input:hover{
-    border: 2px solid  #7a672f;
+    border: 2px solid  var(--color-white);
     border-radius: 0px;
 }
 
@@ -985,7 +981,7 @@ img{
 }
 
 .form-textarea:focus, .form-textarea:hover{
-    border: 2px solid #7a672f;
+    border: 2px solid var(--color-white);
     border-radius: 0px;
 }
 
@@ -1102,11 +1098,7 @@ img{
         padding-left: 60px;
         padding-right: 60px;
     }
-    .header-language{
-        display: flex;
-        justify-content: flex-end;
-        
-    }
+    
     .hero{
         height: 590px;
         background-position: center left;
@@ -1161,6 +1153,7 @@ img{
         }
     .skills-cards{
         padding-left: 60px;
+        margin-left: -40px;
     }
 
     .skills-item{
@@ -1201,6 +1194,7 @@ img{
           padding-top: 134px;
           transform: translateX(100%);
           transition: 0.3s;
+          margin-left: 0px;
           
       }
     .header-nav-active{
