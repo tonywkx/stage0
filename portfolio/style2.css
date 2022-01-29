@@ -434,7 +434,7 @@ img{
 
 
 .header__nav{
-    margin-left: 700px;
+    margin-left: 570px;
 }
 .header__list{
     display: flex;
@@ -467,18 +467,7 @@ img{
     color: white;
 }
 
-.language1{
-    font-family: 'Inter';
-    font-size: 20px;
-    position: relative;
-    padding: 0 16px;
-    text-decoration: none;
-    font-weight: 500;
-    line-height: 45px;
-    color: var(--color-gold); 
-}
-
-.language2{
+.en{
     font-family: 'Inter';
     font-size: 20px;
     position: relative;
@@ -487,9 +476,31 @@ img{
     font-weight: 500;
     line-height: 45px;
     color: var(--color-white); 
+    border: 0;
+    border-radius: 0px;
+    background: transparent;
+
 }
 
-.language1:hover, .language2:hover{
+.ru{
+    font-family: 'Inter';
+    font-size: 20px;
+    position: relative;
+    padding: 0 16px;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 45px;
+    color: var(--color-white); 
+    border: 0;
+    border-radius: 0px;
+    background: transparent;
+}
+
+.language-button-active{
+    color: var(--color-gold); 
+}
+
+.en:hover, .ru:hover{
     filter: invert(21%) sepia(25%) saturate(413%) hue-rotate(7deg) brightness(86%) contrast(85%);
 }
 
@@ -532,6 +543,15 @@ img{
 
 }
 
+.theme-button{
+    border: 0;
+    border-radius: 0px;
+    background: transparent;
+}
+
+.theme-pic:hover{
+    filter: invert(21%) sepia(25%) saturate(413%) hue-rotate(7deg) brightness(86%) contrast(85%);
+}
 /* Header styles end */
 
 
@@ -594,6 +614,14 @@ img{
 }
 
 /* Intro styles end */
+
+.section-light-theme{
+    background-color: #fff;
+    color: #000;
+}
+
+
+
 
 /*skills styles start*/
 
@@ -762,9 +790,14 @@ img{
     transition: .5s;
 }
 
-.portfolio-button:hover, .portfolio-button:focus, .portfolio-button-autumn:hover, .portfolio-button-autumn:focus{
+.portfolio-button:hover, .portfolio-button-autumn:hover, .portfolio-button-autumn:focus{
     color: var(--color-white);
 }
+
+.portfolio-button-active {
+    color: #000;
+    background-color: #bdae82;
+  }
 
 .photo-container{
     display: flex;
@@ -1261,3 +1294,12 @@ img{
       }
 
   }
+
+
+
+/* Светлая тема */
+
+.light-theme{
+    background-color: white;
+    color: var(--bg-dark);
+}
