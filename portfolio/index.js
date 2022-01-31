@@ -53,25 +53,117 @@ console.log(`Вёрстка валидная 10/10\n
 при клике по ссылке в адаптивном меню адаптивное меню плавно скрывается, крестик превращается в бургер-иконку +4/4\n total 74/75`)
 
 
+//бургер
 
-
-(function () {
-    const burgerItem = document.querySelector('.burger');
-    const menu = document.querySelector('.header__nav');
-    const menuCloseItem = document.querySelector('.header-nav-close');
-    const menuLinks = document.querySelectorAll('.header__link');
-    burgerItem.addEventListener('click', () =>{
-        menu.classList.add('header-nav-active');
-    });
-    menuCloseItem.addEventListener('click', () =>{
-        menu.classList.remove('header-nav-active');
-    });
-    if (window.innerWidth <= 768){
-        for (let i = 0; i < menuLinks.length; i += 1) {
-            menuLinks[i].addEventListener('click', () =>{
-                menu.classList.remove('header-nav-active');
-            });    
-        };
+const burgerItem = document.querySelector('.burger');
+const menu = document.querySelector('.header__nav');
+const menuCloseItem = document.querySelector('.header-nav-close');
+const menuLinks = document.querySelectorAll('.header__link');
+burgerItem.addEventListener('click', () =>{
+    menu.classList.add('header-nav-active');
+});
+menuCloseItem.addEventListener('click', () =>{
+    menu.classList.remove('header-nav-active');
+});
+if (window.innerWidth <= 768){
+    for (let i = 0; i < menuLinks.length; i += 1) {
+        menuLinks[i].addEventListener('click', () =>{
+            menu.classList.remove('header-nav-active');
+        });    
     };
-} ());
+};
+
+
+//смена фото
+
+const portfolioImages = document.querySelectorAll('.portfolio-photo-pic');
+const portfolioBtn = document.querySelector('.button-container');
+const portfolioBtns = document.querySelectorAll('.portfolio-button');
+const changeImage = function changeImage(event){
+    if(event.target.classList.contains('portfolio-button')){
+        portfolioImages.forEach((img, index) => img.src = `assets/img/${event.target.dataset.season}/${index + 1}.jpg`);
+        portfolioBtns.forEach((button) => button.classList.remove('portfolio-button-active'));
+        event.target.classList.add('portfolio-button-active');
+    }    
+} 
+portfolioBtn.addEventListener('click',  changeImage);    
+
+
+
+//кэширование
+
+const seasons = ['winter', 'spring', 'summer', 'autumn'];
+function preloadImages() {
+    for(let i = 1; i <= 6; i++) {
+      const img = new Image();
+      seasons.forEach(() => img.src = `./assets/img/${seasons[i]}/${i}.jpg`);
+    }
+  }
+  preloadImages();
+
+
+//language//  
+
+import i18Obj from './translate.js';
+
+const ruLanguage = document.querySelector('.ru');
+const enLanguage = document.querySelector('.en');
+const languageBtns = document.querySelectorAll('.language-button');
+
+function getTranslate (language) {
+    const data = document.querySelectorAll("[data-i18]");
+    data.forEach((element) => {
+        element.textContent = i18Obj[language][element.dataset.i18];
+    });
+    languageBtns.forEach((element) => element.classList.add('language-button-active'));
+    
+    const currentElement = document.querySelectorAll('.form-input');
+    if (currentElement.placeholder) {
+        currentElement.placeholder = i18Obj[language][element.dataset.i18];
+        currentElement.textContent = '';
+      }
+}
+ruLanguage.addEventListener('click', () => {getTranslate('ru')});
+enLanguage.addEventListener('click', () => {getTranslate('en')});
+
+
+
+//смена темы
+
+const themeBtn = document.querySelector('.theme-button');
+const themePic = document.querySelector('.theme-pic');
+
+const lightElements = [
+    'body',
+    '.section-title',
+    '.skills-item-title',
+    '.skills-card-desc',
+    '.price-item-title',
+    '.price-item-decs',
+    '.portfolio-button',
+];
+
+let change = document.querySelectorAll(lightElements);
+themeBtn.addEventListener('click', () => {
+    change.forEach((element) => {element.classList.add('light-theme')});
+    document.documentElement.style.setProperty('--hover-color', 'BDAE82');
+
+    
+    themePic.src = "./assets/svg/carbon_sun.svg";
+    if(themePic.src = "./assets/svg/carbon_sun.svg"){
+     themeBtn.addEventListener('click', () => {
+         themePic.src = "./assets/svg/Vector.svg"});
+    }
+ });
+
+
+console.log(`Смена изображений в секции portfolio +25 /25
+Перевод страницы на два языка +25/25
+Переключение светлой и тёмной темы +25 /15 (обратно на темную не переключает) 
+Дополнительный функционал: выбранный пользователем язык отображения страницы и светлая или тёмная тема сохраняются при перезагрузке страницы +5 /0
+Дополнительный функционал: сложные эффекты для кнопок при наведении и/или клике +5 /5
+sum +70 / 75`);
+
+ 
+
 

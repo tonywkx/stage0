@@ -379,6 +379,7 @@ textarea {
     --color-white: #ffffff;
     --font1: 60px;
     --font2: 40px;
+    --hover-color: #000;
   }
 
 html{
@@ -405,6 +406,10 @@ body{
 img{
     max-width: 100%;
     height: auto;
+}
+
+button{
+    transition: 0.3s;
 }
 
 .conatiner{
@@ -434,7 +439,7 @@ img{
 
 
 .header__nav{
-    margin-left: 700px;
+    margin-left: 570px;
 }
 .header__list{
     display: flex;
@@ -467,18 +472,7 @@ img{
     color: white;
 }
 
-.language1{
-    font-family: 'Inter';
-    font-size: 20px;
-    position: relative;
-    padding: 0 16px;
-    text-decoration: none;
-    font-weight: 500;
-    line-height: 45px;
-    color: var(--color-gold); 
-}
-
-.language2{
+.en{
     font-family: 'Inter';
     font-size: 20px;
     position: relative;
@@ -487,9 +481,31 @@ img{
     font-weight: 500;
     line-height: 45px;
     color: var(--color-white); 
+    border: 0;
+    border-radius: 0px;
+    background: transparent;
+
 }
 
-.language1:hover, .language2:hover{
+.ru{
+    font-family: 'Inter';
+    font-size: 20px;
+    position: relative;
+    padding: 0 16px;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 45px;
+    color: var(--color-white); 
+    border: 0;
+    border-radius: 0px;
+    background: transparent;
+}
+
+.language-button-active{
+    color: var(--color-gold); 
+}
+
+.en:hover, .ru:hover{
     filter: invert(21%) sepia(25%) saturate(413%) hue-rotate(7deg) brightness(86%) contrast(85%);
 }
 
@@ -532,6 +548,15 @@ img{
 
 }
 
+.theme-button{
+    border: 0;
+    border-radius: 0px;
+    background: transparent;
+}
+
+.theme-pic:hover{
+    filter: invert(21%) sepia(25%) saturate(413%) hue-rotate(7deg) brightness(86%) contrast(85%);
+}
 /* Header styles end */
 
 
@@ -591,9 +616,24 @@ img{
 
 .intro-button:hover, .intro-button:focus, .intro-button:active{
     color: var(--color-white);
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+	animation: pulse 1s;
+}
+
+
+@keyframes pulse{
+	0%{box-shadow: 0 0 0 0 #BDAE82}
 }
 
 /* Intro styles end */
+
+.section-light-theme{
+    background-color: #fff;
+    color: #000;
+}
+
+
+
 
 /*skills styles start*/
 
@@ -762,9 +802,23 @@ img{
     transition: .5s;
 }
 
-.portfolio-button:hover, .portfolio-button:focus, .portfolio-button-autumn:hover, .portfolio-button-autumn:focus{
+.portfolio-button:hover, .portfolio-button-autumn:hover, .portfolio-button-autumn:focus{
     color: var(--color-white);
+    background-color: var(--hover-color);
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+	animation: pulse 1s;
 }
+
+
+@keyframes pulse{
+	0%{box-shadow: 0 0 0 0 #BDAE82}
+}
+
+
+.portfolio-button-active {
+    color: #000;
+    background-color: #bdae82;
+  }
 
 .photo-container{
     display: flex;
@@ -893,7 +947,15 @@ img{
 
 .price-button:hover, .price-button:focus, .price-button:active{
     color: var(--color-white);
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+	animation: pulse 1s;
 }
+
+
+@keyframes pulse{
+	0%{box-shadow: 0 0 0 0 #BDAE82}
+}
+
 
 /*Price styles end*/
 
@@ -1004,6 +1066,13 @@ img{
 
 .contacts-form-button:hover, .contacts-form-button:focus, .contacts-form-button:active{
     color: var(--color-white);
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+	animation: pulse 1s;
+}
+
+
+@keyframes pulse{
+	0%{box-shadow: 0 0 0 0 #BDAE82}
 }
 
 /*Contacts styles end*/
@@ -1261,3 +1330,23 @@ img{
       }
 
   }
+
+
+
+/* Светлая тема */
+
+.light-theme{
+    background-color: white;
+    color: var(--bg-dark);
+}
+
+.light-theme:before,
+.light-theme:after{
+    background-color: var(--bg-dark);
+}
+
+/*.light-theme:hover{
+    background-color: var(--color-gold);
+    color: var(--color-white);
+}*/
+
