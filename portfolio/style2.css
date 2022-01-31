@@ -379,6 +379,7 @@ textarea {
     --color-white: #ffffff;
     --font1: 60px;
     --font2: 40px;
+    --hover-color: #000;
   }
 
 html{
@@ -405,6 +406,10 @@ body{
 img{
     max-width: 100%;
     height: auto;
+}
+
+button{
+    transition: 0.3s;
 }
 
 .conatiner{
@@ -611,6 +616,13 @@ img{
 
 .intro-button:hover, .intro-button:focus, .intro-button:active{
     color: var(--color-white);
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+	animation: pulse 1s;
+}
+
+
+@keyframes pulse{
+	0%{box-shadow: 0 0 0 0 #BDAE82}
 }
 
 /* Intro styles end */
@@ -792,7 +804,16 @@ img{
 
 .portfolio-button:hover, .portfolio-button-autumn:hover, .portfolio-button-autumn:focus{
     color: var(--color-white);
+    background-color: var(--hover-color);
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+	animation: pulse 1s;
 }
+
+
+@keyframes pulse{
+	0%{box-shadow: 0 0 0 0 #BDAE82}
+}
+
 
 .portfolio-button-active {
     color: #000;
@@ -926,7 +947,15 @@ img{
 
 .price-button:hover, .price-button:focus, .price-button:active{
     color: var(--color-white);
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+	animation: pulse 1s;
 }
+
+
+@keyframes pulse{
+	0%{box-shadow: 0 0 0 0 #BDAE82}
+}
+
 
 /*Price styles end*/
 
@@ -1037,6 +1066,13 @@ img{
 
 .contacts-form-button:hover, .contacts-form-button:focus, .contacts-form-button:active{
     color: var(--color-white);
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+	animation: pulse 1s;
+}
+
+
+@keyframes pulse{
+	0%{box-shadow: 0 0 0 0 #BDAE82}
 }
 
 /*Contacts styles end*/
@@ -1303,3 +1339,14 @@ img{
     background-color: white;
     color: var(--bg-dark);
 }
+
+.light-theme:before,
+.light-theme:after{
+    background-color: var(--bg-dark);
+}
+
+/*.light-theme:hover{
+    background-color: var(--color-gold);
+    color: var(--color-white);
+}*/
+

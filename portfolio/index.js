@@ -133,14 +133,37 @@ enLanguage.addEventListener('click', () => {getTranslate('en')});
 const themeBtn = document.querySelector('.theme-button');
 const themePic = document.querySelector('.theme-pic');
 
+const lightElements = [
+    'body',
+    '.section-title',
+    '.skills-item-title',
+    '.skills-card-desc',
+    '.price-item-title',
+    '.price-item-decs',
+    '.portfolio-button',
+];
+
+let change = document.querySelectorAll(lightElements);
 themeBtn.addEventListener('click', () => {
-   themePic.src = "./assets/svg/carbon_sun.svg";
-   if(themePic.src = "./assets/svg/carbon_sun.svg"){
-    themeBtn.addEventListener('click', () => {
-        themePic.src = "./assets/svg/Vector.svg"});
-   }
-});
+    change.forEach((element) => {element.classList.add('light-theme')});
+    document.documentElement.style.setProperty('--hover-color', 'BDAE82');
+
+    
+    themePic.src = "./assets/svg/carbon_sun.svg";
+    if(themePic.src = "./assets/svg/carbon_sun.svg"){
+     themeBtn.addEventListener('click', () => {
+         themePic.src = "./assets/svg/Vector.svg"});
+    }
+ });
 
 
+console.log(`Смена изображений в секции portfolio +25 /25
+Перевод страницы на два языка +25/25
+Переключение светлой и тёмной темы +25 /15 (обратно на темную не переключает) 
+Дополнительный функционал: выбранный пользователем язык отображения страницы и светлая или тёмная тема сохраняются при перезагрузке страницы +5 /0
+Дополнительный функционал: сложные эффекты для кнопок при наведении и/или клике +5 /5
+sum +70 / 75`);
+
+ 
 
 
