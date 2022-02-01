@@ -100,7 +100,7 @@ function preloadImages(){
       }
     })
   }
-
+preloadImages();
 
 
 //language//  
@@ -166,5 +166,73 @@ console.log(`Смена изображений в секции portfolio +25 /25
 sum +70 / 75`);
 
  
+/*
+let lang = localStorage.getItem('lang') ? localStorage.getItem('lang') : 'en',
+    theme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'dark';
+getTranslate(lang);
 
+function changeThemeFunc(theme) {
+    if (theme === 'dark') {
+        document.documentElement.style.setProperty('--portfolio-active-button-color', '#000000');
+        document.documentElement.style.setProperty('--portfolio-button-color', '#bdae82');
+        document.documentElement.style.setProperty('--portfolio-button-color-hover', '#ffffff');
+        document.documentElement.style.setProperty('--portfolio-button-bg-color-hover', 'transparent');
+        document.documentElement.style.setProperty('--navbar-bg-color', '#000000');
+        document.documentElement.style.setProperty('--navbar-color', '#ffffff');
+        switchThemeArray.forEach((item) => document.querySelectorAll(item).forEach((elem) => elem.classList.remove('light-theme')));
+        document.querySelector('.switch-theme-button').classList.remove('active-switch-theme-btn');
+        document.querySelectorAll('.section-title-wrapper').forEach((item) => item.classList.remove('section-title-wrapper-light-theme'));
+        document.querySelectorAll('.section-title').forEach((item) => item.classList.remove('section-title-light-theme'));
+        theme = 'light';
+    } else {
+        document.documentElement.style.setProperty('--portfolio-active-button-color', '#ffffff');
+        document.documentElement.style.setProperty('--portfolio-button-color', '#000000');
+        document.documentElement.style.setProperty('--portfolio-button-color-hover', '#000000');
+        document.documentElement.style.setProperty('--portfolio-button-bg-color-hover', '#bdae82');
+        document.documentElement.style.setProperty('--navbar-bg-color', '#ffffff');
+        document.documentElement.style.setProperty('--navbar-color', '#000000');
+        switchThemeArray.forEach((item) => document.querySelectorAll(item).forEach((elem) => elem.classList.add('light-theme')));
+        document.querySelector('.switch-theme-button').classList.add('active-switch-theme-btn');
+        document.querySelectorAll('.section-title-wrapper').forEach((item) => item.classList.add('section-title-wrapper-light-theme'));
+        document.querySelectorAll('.section-title').forEach((item) => item.classList.add('section-title-light-theme'));
+        theme = 'dark';
+    }
+}
+
+function changeTheme(event) {
+    if (!event.target.classList.contains('active-switch-theme-btn')) {
+        theme === 'dark' ? theme = 'light' : theme = 'dark';
+    }
+    changeThemeFunc(theme)
+}
+const switchThemeArray = ['.main-container', '.skill-item h3', '.skill-item p', '.price-card h3', '.desc-span', '.btn-transparent'];
+document.querySelector('.switch-theme-button').addEventListener('click', changeTheme);
+
+// local storage
+function setLocalStorage() {
+    localStorage.setItem('lang', lang);
+    localStorage.setItem('theme', theme);
+}
+window.addEventListener('beforeunload', setLocalStorage)
+
+function getLocalStorage() {
+    if (localStorage.getItem('lang')) {
+        const lang = localStorage.getItem('lang');
+        getTranslate(lang);
+    }
+    if (localStorage.getItem('theme')) {
+        const theme = localStorage.getItem('theme');
+        changeThemeFunc(theme);
+    }
+}
+window.addEventListener('load', getLocalStorage)
+
+
+
+
+
+
+
+
+*/
 
