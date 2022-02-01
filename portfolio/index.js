@@ -91,15 +91,16 @@ portfolioBtn.addEventListener('click',  changeImage);
 
 
 //кэширование
-
-const seasons = ['winter', 'spring', 'summer', 'autumn'];
-function preloadImages() {
-    for(let i = 1; i <= 6; i++) {
-      const img = new Image();
-      seasons.forEach(() => img.src = `./assets/img/${seasons[i]}/${i}.jpg`);
-    }
+function preloadImages(){
+    const seasons = ['winter', 'spring', 'summer', 'autumn'];
+    seasons.forEach( (element)=>{
+      for(let i = 1; i <= 6; i++) {
+        const img = new Image();
+        img.src = `./assets/img/${element}/${i}.jpg`;
+      }
+    })
   }
-  preloadImages();
+
 
 
 //language//  
