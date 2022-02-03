@@ -22,7 +22,7 @@ body{
     line-height: 1.2;
     font-weight: normal;
     color: #ffffff;
-    background-color: var(--bg-dark);
+    background-color: #090a09f1;
 }
 
 img{
@@ -44,7 +44,7 @@ button{
 
 header{
     width: 100%;
-    background-color: #000;
+    
     margin: 0 auto;
 }
 
@@ -59,7 +59,7 @@ header{
   .logo {
     width: 50px;
     height: 50px;
-    background-image: url('./assets/svg/logo.svg');
+    background-image: url('./assets/svg/logo1.svg');
     background-size: contain;
     background-repeat: no-repeat;  
     transition: 0.5s;
@@ -105,11 +105,12 @@ header{
     color: var(--color-gold);
   }
   
-  .nav-item.active {
-    filter: invert(21%) sepia(25%) saturate(413%) hue-rotate(7deg) brightness(86%) contrast(85%);
+  .nav-item-active {
+      color: var(--color-gold);
+    /*filter: invert(21%) sepia(25%) saturate(413%) hue-rotate(7deg) brightness(86%) contrast(85%);*/
   }
   
-  .nav-item.active:hover {
+  .nav-item-active:hover {
     filter: none;
   }
 
@@ -125,10 +126,10 @@ header{
     background-size: cover;
   }
 
-  /*.solovey-active{
+  .solovey-active{
     background-image: url("./assets/img/solovey.jpg");
   }
-  .drozd-active{
+  /*.drozd-active{
     background-image: url("./assets/img/drozd.jpg")
   }
   .zarynka-active{
@@ -141,7 +142,10 @@ header{
     background-image: url("./assets/img/slavka.jpg")
   }*/
   
+
   
+
+
   .audio-button {
     width: 150px;
     height: 150px;
@@ -151,6 +155,11 @@ header{
     border: 0;  
     transition: .7s;
   }
+
+  .pause {  
+    background-image: url("./assets/svg/pause.svg");
+  }
+  
   
   .audio-button:hover {
     filter: brightness(.45);
@@ -172,7 +181,7 @@ header{
     justify-content: center;
     align-items: center;
     align-content: space-between;
-    background-color: var(--bg-dark);
+    background-color: rgb(51, 48, 48);
   }
 
 .footer-container{
