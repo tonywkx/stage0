@@ -8,7 +8,10 @@ const navDrozd = document.querySelector('.drozd-item');
 const navZarynka = document.querySelector('.zarynka-item');
 const navJavoronok = document.querySelector('.javoronok-item');
 const navSlavka = document.querySelector('.slavka-item');
-const logo = document.querySelector('.logo')
+const logo = document.querySelector('.logo');
+
+
+
 
 navSolovey.addEventListener('click', () =>{
     image.style.backgroundImage = 'url("./assets/img/solovey.jpg")';
@@ -25,7 +28,11 @@ navSolovey.addEventListener('click', () =>{
             isPlay = false;
         }
     
-    navSolovey.classList.add('nav-item-active');
+    function active() {
+        allItems.forEach((item) => item.classList.remove('nav-item-active'));
+        navSolovey.classList.add('nav-item-active');
+        }
+    active();
 }
 playPauseBtn.addEventListener('click', playAudio);
     
