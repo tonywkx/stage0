@@ -52,3 +52,7 @@ function changeBG() {
     let str = randomColor();
     document.body.style.backgroundColor = str;
 }
+
+
+//language
+

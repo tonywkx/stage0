@@ -41,18 +41,30 @@ button{
   width: 90vw;
   max-width: 60em;
   margin: 0 auto;
-  margin-top: 3rem;
+  margin-top: 2rem;
   text-align: center;
   display: grid;
   justify-items: center;
 }
-  
+
+.button{
+  height: 10px;
+  width: 15px;
+  background-color: transparent;
+  color: #49e9e1;
+  font-weight: 800;
+  font-size: 24px;
+  border: 0;
+  border-radius: 0px;
+  margin-left: 15px;
+  cursor: pointer;
+}
 
   
 .empty {
-    margin-top: 3rem;
+    margin-top: 2rem;
     color: hsl(187, 84%, 54%);
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     font-size: 1.5rem;
 }
 
