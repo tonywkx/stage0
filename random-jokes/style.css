@@ -25,6 +25,7 @@ body{
   background-color: #090a09f1;
 }
 
+
 img{
   max-width: 100%;
   height: auto;
@@ -69,7 +70,7 @@ button{
     cursor: pointer;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
-    margin-top: 50px;
+    margin-top: 40px;
   }
 .btn:hover {
     color: #49a6e9;
