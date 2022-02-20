@@ -7,6 +7,20 @@ ground.src = "./assets/ground.png";
 const foodImg = new Image();
 foodImg.src = "./assets/food.png";
 
+const audio = new Audio();
+function playAudio() {
+    audio.src = './assets/eat.mp3'
+    audio.currentTime = 0;
+    audio.play();
+}
+
+function reload(){
+    location.reload();
+}
+
+const restart = document.querySelector('.restart')
+restart.addEventListener('click', reload)
+
 let box = 32;
 
 let score = 0;
@@ -59,6 +73,7 @@ function drawGame(){
     let snakeY = snake[0].y;
 
     if(snakeX == food.x && snakeY == food.y){
+        playAudio();
         score++;
         food = {
             x: Math.floor((Math.random() * 17 + 1)) * box,
