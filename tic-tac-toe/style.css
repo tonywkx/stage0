@@ -1,0 +1,70 @@
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+    overflow-x: hidden;
+  }
+  *, *::before, *::after{
+    box-sizing: inherit;
+  }
+
+
+canvas{
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+footer{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    background-color: rgb(51, 48, 48);
+  }
+  
+  .footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    color: #fff;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .github{
+    color: #fff;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .github:hover{
+    color: var(--color-gold);
+  }  
+    
+  .rss{
+    text-decoration: none;
+    
+  }
+  
+  .rss-img{
+    height: 60px;
+    color: #FFFFFF;
+  }
+  
+  .rss-img:hover{
+    filter: invert(21%) sepia(25%) saturate(413%) hue-rotate(7deg) brightness(86%) contrast(85%);
+  }
