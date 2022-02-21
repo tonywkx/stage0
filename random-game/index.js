@@ -14,6 +14,8 @@ function playAudio() {
     audio.play();
 }
 
+const gameOverSound = new Audio('./assets/gameover.mp3');
+
 function reload(){
     location.reload();
 }
@@ -24,6 +26,7 @@ restart.addEventListener('click', reload)
 let box = 32;
 
 let score = 0;
+let High_Score = 0;
 
 let food = {
     x: Math.floor((Math.random() * 17 + 1)) * box,
@@ -79,12 +82,21 @@ function drawGame(){
             x: Math.floor((Math.random() * 17 + 1)) * box,
             y: Math.floor((Math.random() * 15 + 3)) * box,
         }
+        if (score > hiscoreval) {
+            hiscoreval = score;
+            localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
+            hiscoreBox.innerHTML = "HiScore: " + hiscoreval;
+        }
+        
     } else {
         snake.pop();
     }
 
     if(snakeX < box || snakeX > box * 17 || snakeY < 3 * box || snakeY > box * 17){
+        gameOverSound.play();
         clearInterval(game);
+        alert('YOU SCORE IS  ' + score);
+        location.reload();
     }
 
     if(dir == 'left') snakeX -= box;
@@ -99,7 +111,16 @@ function drawGame(){
 
     eatTail(newHead, snake);
 
+    let hiscore = localStorage.getItem("hiscore");
+    if (hiscore === null) {
+        hiscoreval = 0;
+    localStorage.setItem("hiscore", JSON.stringify(hiscoreval))
+    } else {
+    hiscoreval = JSON.parse(hiscore);
+    hiscoreBox.innerHTML = "HiScore: " + hiscore;
+    }
+
     snake.unshift(newHead);
 }
 
-let game = setInterval(drawGame, 100);
+let game = setInterval(drawGame, 110);
