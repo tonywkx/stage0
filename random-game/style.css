@@ -1,0 +1,95 @@
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+    overflow-x: hidden;
+  }
+  *, *::before, *::after{
+    box-sizing: inherit;
+  }
+
+body{
+  background-color: aquamarine;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+button{
+  height: 30px;
+  border: 0;
+  border-radius: 0px;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 800;
+  color: rgb(1, 27, 61);
+  margin-left: 20px;
+  font-size: large;
+}
+
+button:hover{
+  color: #FFFFFF;
+}
+
+canvas{
+    display: block;
+    margin: 0 auto;
+}
+
+main{
+  margin-top: 20px;
+}
+
+footer{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    background-color: rgb(4, 62, 66);
+    margin-top: 50px;
+  }
+  
+  .footer-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    color: #fff;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .github{
+    color: #fff;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  .github:hover{
+    color: rgb(180, 144, 44);
+  }  
+    
+  .rss{
+    text-decoration: none;
+    
+  }
+  
+  .rss-img{
+    height: 60px;
+    color: #FFFFFF;
+  }
+  
+  .rss-img:hover{
+    filter: invert(21%) sepia(25%) saturate(413%) hue-rotate(7deg) brightness(86%) contrast(85%);
+  }
